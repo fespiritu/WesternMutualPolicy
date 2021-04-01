@@ -22,13 +22,21 @@ namespace Infrastructure.Data
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+      var cover2 = new Coverage { Id = 2, Description = "Coverage2", Cost = 20 };
       modelBuilder.Entity<Coverage>().HasData(
         new Coverage { Id = 1, Description = "Coverage1", Cost = 10},
-        new Coverage { Id = 2, Description = "Coverage2", Cost = 20 },
+        cover2,
         new Coverage { Id = 3, Description = "Coverage3", Cost = 30 },
         new Coverage { Id = 4, Description = "Coverage4", Cost = 40 },
         new Coverage { Id = 5, Description = "Coverage5", Cost = 50 }
         );
+
+      modelBuilder.Entity<States>().HasData(
+        new States { Id = 1, State = "AZ", Description = "Arizona"},
+        new States { Id = 2, State = "CA", Description = "California" },
+        new States { Id = 3, State = "NY", Description = "New York" }
+        );
+
     }
   }
 }
