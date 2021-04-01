@@ -14,5 +14,6 @@ namespace Core.Entities
 
     [Column(TypeName = "decimal(19,4)")]
     public decimal Cost { get; set; }
+    public virtual ICollection<Policy> Policys { get; set; }
   }
 }

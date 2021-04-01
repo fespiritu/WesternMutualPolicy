@@ -20,5 +20,6 @@ namespace Core.Entities
     [Required]
     [StringLength(50)]
     public string Status { get; set; }  
+    public virtual ICollection<Coverage> Coverages { get; set; }
   }
 }

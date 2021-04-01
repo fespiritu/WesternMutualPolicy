@@ -16,12 +16,14 @@ namespace Infrastructure.Data
     public DbSet<CoverageAreaLimit> CoverageAreaLimits { get; set; }
     public DbSet<Insured> Insureds { get; set; }
     public DbSet<Policy> Policies { get; set; }
-    public DbSet<PolicyCoverage> PolicyCoverages { get; set; }
+    // public DbSet<PolicyCoverage> PolicyCoverages { get; set; }
     public DbSet<Property> Properties { get; set; }
     public DbSet<States> StatesDb { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+      base.OnModelCreating(modelBuilder);
+
       var cover2 = new Coverage { Id = 2, Description = "Coverage2", Cost = 20 };
       modelBuilder.Entity<Coverage>().HasData(
         new Coverage { Id = 1, Description = "Coverage1", Cost = 10},
