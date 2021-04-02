@@ -73,13 +73,13 @@ namespace WesternMutual.Policy
         app.UseExceptionHandler("/Error");
       }
 
-      // FE
-      app.UseCors();
-
       app.UseStaticFiles();
       app.UseSpaStaticFiles();
 
       app.UseRouting();
+
+      // FE
+      app.UseCors();
 
       app.UseEndpoints(endpoints =>
       {

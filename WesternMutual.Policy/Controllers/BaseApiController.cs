@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 
+
 namespace WesternMutual.Policy.Controllers
 {
   [EnableCors("CorsPolicy")]

@@ -10,7 +10,7 @@ using Core.Models;
 
 namespace WesternMutual.Policy.Controllers
 {
-  public class LookupModelController : Controller
+  public class LookupModelController : BaseApiController
   {
     private readonly IGenericRepository<States> _repoStates;
     private readonly IGenericRepository<CoverageAreaLimit> _repoCoverageAreaLimit;
